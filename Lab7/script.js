@@ -29,7 +29,12 @@ function task3() {
   const run = document.querySelector(".run");
   const output = document.querySelector(".output");
   run.addEventListener("click", () => {
-    output.textContent = window;
+    s = "";
+    for (let r in window) {
+      s += r;
+      s += " ";
+    }
+    output.textContent = s;
   });
 }
 function task4(todo) {
@@ -73,9 +78,9 @@ function task6() {
     }
   });
 }
-// task1(meanings[0][0])
-// task2(1, meanings[1][0])
-// task3()
-// task4(meanings[1][0])
-// task5();
-// task6();
+task1(meanings[0][0]);
+task2(1, meanings[1][0]);
+task3();
+task4(meanings[1][0]);
+task5();
+task6();
